@@ -10,7 +10,7 @@ L’obiettivo è rendere la gestione del router più veloce, comoda e accessibil
 ---
 
 ## 🚀 Funzionalità attuali
-- Login rapido al pannello del router
+- Login rapido router
 - Attivazione/disattivazione Wi‑Fi con un clic
 - Attivazione/disattivazione connessione dati 4G
 - Statistiche mensili: GB usati, GB rimanenti, download e upload
