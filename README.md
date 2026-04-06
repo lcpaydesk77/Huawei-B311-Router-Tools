@@ -1,18 +1,18 @@
 # Huawei B311 Router Tools
 
-Estensione per Google Chrome che semplifica la gestione del router Huawei B311-221.
+Estensione per semplificare le operazioni più comuni del router Huawei B311.
 
 ## Funzionalità
-- Login rapido al pannello del router
-- Attiva/disattiva Wi‑Fi
-- Attiva/disattiva connessione dati 4G
-- Statistiche mensili: GB usati, GB rimanenti, download/upload
-- Elenco dispositivi connessi
-- Qualità del segnale 4G
+- Login rapido
+- Wi‑Fi on/off
+- Connessione dati 4G on/off
+- Traffico mensile (GB usati e rimanenti)
+- Dispositivi connessi
+- Qualità segnale 4G
 
 ## Compatibilità
-Funziona su qualsiasi sistema operativo tramite Google Chrome (Windows, Linux, macOS, ChromeOS).
-Non ancora testata su altri browser basati su Chromium.
+Chrome su Windows, Linux, macOS e ChromeOS.
+Non testata su altri browser basati su Chromium.
 
 ## Licenza
-Distribuito sotto licenza GPL‑3.0.
+GPL‑3.0
