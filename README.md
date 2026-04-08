@@ -14,6 +14,15 @@
 - **Qualità segnale 4G** – barra potenza (RSRP) e qualità (RSRQ) con colori dinamici e dettagli tecnici espandibili
 - **Multilingua** – Italiano, Inglese, Spagnolo
 - **Impostazioni** – cambio gateway (es. 192.168.1.1, 192.8.8.1)
+- 
+## 📸 Screenshot
+
+| Home | Dispositivi | Segnale 4G |
+|------|-------------|-------------|
+| ![Home](screenshot-home-en.png) | ![Dispositivi](screenshot-devices-en.png) | ![Segnale](screenshot-signal-en.png) |
+
+*Collage riassuntivo*  
+![Collage](screenshot-collage-en.png)
 
 ## 📦 Installazione
 
