@@ -224,7 +224,8 @@ function rsrpToPercent(rsrp) {
   if (!rsrp) return 0;
   let val = parseInt(rsrp);
   val = Math.min(-80, Math.max(-110, val));
-  return ((val + 110) / 30) * 100;
+  // Invertita: -110 dBm → 100%, -80 dBm → 0%
+  return 100 - ((val + 110) / 30) * 100;
 }
 
 function rsrqToPercent(rsrq) {
