@@ -33,7 +33,10 @@ const MESSAGES = {
     hideDetails: "Hide details",
     logout: "Logout",
     homeTab: "🏠 Home",
-    devicesTab: "📱 Devices"
+    devicesTab: "📱 Devices",
+    signal4g: "📡 4G Signal",
+    signalPower: "Signal power (RSRP)",
+    signalQuality: "Signal quality (RSRQ)"
   },
   it: {
     appName: "Router Manager", appDesc: "Gestisci il tuo router Huawei",
@@ -68,7 +71,10 @@ const MESSAGES = {
     hideDetails: "Nascondi dettagli",
     logout: "Esci",
     homeTab: "🏠 Home",
-    devicesTab: "📱 Dispositivi"
+    devicesTab: "📱 Dispositivi",
+    signal4g: "📡 Segnale 4G",
+    signalPower: "Potenza segnale (RSRP)",
+    signalQuality: "Qualità segnale (RSRQ)"
   },
   es: {
     appName: "Router Manager", appDesc: "Gestiona tu router Huawei",
@@ -103,7 +109,10 @@ const MESSAGES = {
     hideDetails: "Ocultar detalles",
     logout: "Salir",
     homeTab: "🏠 Inicio",
-    devicesTab: "📱 Dispositivos"
+    devicesTab: "📱 Dispositivos",
+    signal4g: "📡 Señal 4G",
+    signalPower: "Potencia de señal (RSRP)",
+    signalQuality: "Calidad de señal (RSRQ)"
   }
 };
 
