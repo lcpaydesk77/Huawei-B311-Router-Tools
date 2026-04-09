@@ -73,7 +73,6 @@ async function login(password) {
 }
 
 async function ensureLoggedIn(pwd) {
-  // Always attempt login; if session is stale (108007), wait and retry once
   try {
     await login(pwd);
   } catch(e) {
@@ -220,25 +219,25 @@ async function getSignalQuality() {
   } catch(e) { return null; }
 }
 
-function rsrpToPercent(rsrp) {
-  if (!rsrp) return 0;
-  let val = parseInt(rsrp);
-  // Limiti: -40 = 0% (barra corta), -120 = 100% (barra lunga)
-  val = Math.min(-40, Math.max(-120, val));
-  return ((-val - 40) / 80) * 100;
+// Restituisce il colore del pallino per RSRP
+function getRsrpDot(rsrp) {
+  if (!rsrp) return '⚪';
+  const val = parseInt(rsrp);
+  if (val > -75) return '🟢';
+  if (val > -85) return '🟢';
+  if (val > -95) return '🟡';
+  if (val > -105) return '🟠';
+  return '🔴';
 }
 
-function rsrqToPercent(rsrq) {
-  if (!rsrq) return 0;
-  let val = parseInt(rsrq);
-  val = Math.min(-3, Math.max(-20, val));
-  return ((val + 20) / 17) * 100;
-}
-
-function getBarColor(percent) {
-  if (percent >= 60) return '#0d652d';
-  if (percent >= 30) return '#e37400';
-  return '#c5221f';
+// Restituisce il colore del pallino per RSRQ
+function getRsrqDot(rsrq) {
+  if (!rsrq) return '⚪';
+  const val = parseFloat(rsrq);
+  if (val > -10) return '🟢';
+  if (val > -15) return '🟡';
+  if (val > -20) return '🟠';
+  return '🔴';
 }
 
 function getSignalDescription(rsrp) {
@@ -279,23 +278,22 @@ async function updateSignalHome() {
   }
   container.style.display = 'block';
   
-  const percentRsrp = rsrpToPercent(signal.rsrp);
-  document.getElementById('signal-bar-fill').style.width = percentRsrp + '%';
-  document.getElementById('signal-bar-fill').style.background = getBarColor(percentRsrp);
-  document.getElementById('signal-value-home').innerHTML = signal.rsrp + ' dBm';
+  // RSRP - Potenza segnale
+  document.getElementById('signal-value-home').innerHTML = signal.rsrp;
   document.getElementById('signal-desc-home').innerHTML = getSignalDescription(signal.rsrp);
+  document.getElementById('signal-dot-rsrp').innerHTML = getRsrpDot(signal.rsrp);
   
+  // RSRQ - Qualità segnale
   if (signal.rsrq) {
-    const percentRsrq = rsrqToPercent(signal.rsrq);
-    document.getElementById('signal-rsrq-bar').style.width = percentRsrq + '%';
-    document.getElementById('signal-rsrq-bar').style.background = getBarColor(percentRsrq);
-    document.getElementById('signal-rsrq-value').innerHTML = signal.rsrq + ' dB';
+    document.getElementById('signal-rsrq-value').innerHTML = signal.rsrq;
     document.getElementById('signal-rsrq-desc').innerHTML = getRsrqDescription(signal.rsrq);
+    document.getElementById('signal-dot-rsrq').innerHTML = getRsrqDot(signal.rsrq);
     document.getElementById('rsrq-container').style.display = 'block';
   } else {
     document.getElementById('rsrq-container').style.display = 'none';
   }
   
+  // Dettagli (pannello espandibile)
   document.getElementById('signal-rsrp-detail').textContent = signal.rsrp ? signal.rsrp + ' dBm' : '--';
   document.getElementById('signal-rsrq-detail').textContent = signal.rsrq ? signal.rsrq + ' dB' : '--';
   document.getElementById('signal-rssi-detail').textContent = signal.rssi ? signal.rssi + ' dBm' : '--';
