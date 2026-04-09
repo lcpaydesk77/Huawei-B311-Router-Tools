@@ -6,15 +6,14 @@
 
 ## 🚀 Funzionalità
 
-- **Login rapido** con salvataggio password opzionale (memorizzata localmente)
-- **Wi‑Fi On/Off** (toggle)
-- **Dati mobili 4G On/Off** (toggle)
-- **Traffico mensile** – GB usati e rimanenti con barra di consumo
-- **Dispositivi connessi** – elenco con IP, tipo connessione, MAC e velocità
-- **Qualità segnale 4G** – barra potenza (RSRP) e qualità (RSRQ) con colori dinamici e dettagli tecnici espandibili
-- **Multilingua** – Italiano, Inglese, Spagnolo
-- **Impostazioni** – cambio gateway (es. 192.168.1.1, 192.8.8.1)
-- 
+- Login rapido con salvataggio password
+- Toggle WiFi e Dati mobili
+- Traffico mensile con barra di consumo
+- Dispositivi connessi (IP, MAC, velocità)
+- Segnale 4G: pallini colorati per RSRP e RSRQ + dettagli espandibili
+- Multilingua (IT, EN, ES)
+- Gatewey personalizzabile
+
 ## 📸 Screenshot
 
 | Home | Dispositivi | Segnale 4G |
