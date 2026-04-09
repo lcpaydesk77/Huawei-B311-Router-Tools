@@ -223,21 +223,20 @@ async function getSignalQuality() {
 function getRsrpDot(rsrp) {
   if (!rsrp) return '⚪';
   const val = parseInt(rsrp);
-  if (val > -75) return '🟢';
-  if (val > -85) return '🟢';
-  if (val > -95) return '🟡';
-  if (val > -105) return '🟠';
-  return '🔴';
+  if (val >= -80) return '🟢';      // Eccellente
+  if (val >= -90) return '🟢';      // Buono (verde chiaro, ma usiamo 🟢)
+  if (val >= -105) return '🟡';     // Discreto (giallo)
+  return '🟠';                       // Debole (arancione)
 }
 
 // Restituisce il colore del pallino per RSRQ
 function getRsrqDot(rsrq) {
   if (!rsrq) return '⚪';
   const val = parseFloat(rsrq);
-  if (val > -10) return '🟢';
-  if (val > -15) return '🟡';
-  if (val > -20) return '🟠';
-  return '🔴';
+  if (val >= -5) return '🟢';       // Eccellente
+  if (val >= -8) return '🟢';       // Buono
+  if (val >= -12) return '🟡';      // Discreto (giallo)
+  return '🟠';                       // Debole (arancione)
 }
 
 function getSignalDescription(rsrp) {
