@@ -3,15 +3,9 @@
   "name": "__MSG_appName__",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
-  "version": "2.0",
-  "permissions": [
-    "storage",
-    "cookies",
-    "tabs"
-  ],
-  "host_permissions": [
-    "http://*/*"
-  ],
+  "version": "1.0",
+  "permissions": ["storage"],
+  "optional_host_permissions": ["http://*/"],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
