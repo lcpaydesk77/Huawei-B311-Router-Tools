@@ -30,8 +30,6 @@
 3. Attiva la **Modalità sviluppatore** (in alto a destra)
 4. Clicca **Carica estensione non pacchettizzata** e seleziona la cartella dell'estensione
 
-> **Nota**: Quando l'estensione sarà pubblicata sul Chrome Web Store, potrai installarla con un clic.
-
 ## ⚙️ Configurazione
 
 - **Gateway**: se hai cambiato l'indirizzo del router (es. da 192.168.1.1 a 192.8.8.1), aprilo nelle impostazioni dell'estensione.
